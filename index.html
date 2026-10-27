@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11+ Maths Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --panel: #ffffff;
+        --primary: #1d4ed8;
+        --primary-dark: #163ea8;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #dfe7f5;
+        --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 24px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: #fff;
+        padding: 28px 30px 18px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 2.7rem);
+        line-height: 1.2;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 12px;
+        padding: 18px 24px 0;
+        border-bottom: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .tab-button {
+        appearance: none;
+        border: none;
+        background: transparent;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 14px 18px;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .tab-button.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+      }
+
+      .tab-panel {
+        display: none;
+        padding: 30px 28px 28px;
+        background: #fff;
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+
+      .section {
+        margin-bottom: 28px;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        color: var(--primary-dark);
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+      }
+
+      p, li {
+        font-size: 1.02rem;
+        line-height: 1.7;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      .contact-box {
+        border: 1px solid var(--border);
+        background: #f8fbff;
+        border-radius: 14px;
+        padding: 20px 22px;
+      }
+
+      .email-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: var(--primary);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .email-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 16px;
+        }
+
+        .tabs {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .tab-button {
+          width: 100%;
+          text-align: left;
+          border-bottom: 1px solid var(--border);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="card">
+        <div class="header">
+          <h1>11+ Maths Privacy Policy</h1>
+        </div>
+
+        <nav class="tabs" aria-label="Page tabs">
+          <button class="tab-button active" type="button" data-tab="privacy">Privacy Policy</button>
+          <button class="tab-button" type="button" data-tab="contact">Contact</button>
+        </nav>
+
+        <section id="privacy" class="tab-panel active" aria-label="Privacy policy details">
+          <div class="section">
+            <h2>Privacy</h2>
+            <p>This app does not collect, store, sell, or share personal information. Practice questions run on the device and do not require an account.</p>
+          </div>
+
+          <div class="section">
+            <h2>Data we collect</h2>
+            <p>The app does not collect, store, sell, or share personal information. Practice questions run on the device and do not require an account.</p>
+          </div>
+
+          <div class="section">
+            <h2>Children's privacy</h2>
+            <p>The app is designed for 11+ revision. It does not ask children for names, email addresses, location, photos, contacts, or any other personal details.</p>
+          </div>
+
+          <div class="section">
+            <h2>Internet and tracking</h2>
+            <p>The app does not use third-party advertising, analytics, tracking, or behavioural profiling. It is intended to work offline.</p>
+          </div>
+
+          <div class="section">
+            <h2>App Store and device data</h2>
+            <p>Apple may process purchase, download, crash, and diagnostic information under Apple's own privacy terms. That information is handled by Apple, not by this app.</p>
+          </div>
+        </section>
+
+        <section id="contact" class="tab-panel" aria-label="Contact information">
+          <div class="section">
+            <h2>Contact</h2>
+            <div class="contact-box">
+              <p>For privacy questions, please contact:</p>
+              <a class="email-link" href="mailto:wolfappdevelopmentnow@gmail.com">wolfappdevelopmentnow@gmail.com</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const buttons = document.querySelectorAll('.tab-button');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const target = button.dataset.tab;
+
+          buttons.forEach((btn) => {
+            btn.classList.toggle('active', btn === button);
+          });
+
+          panels.forEach((panel) => {
+            panel.classList.toggle('active', panel.id === target);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
